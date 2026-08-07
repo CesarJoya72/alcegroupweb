@@ -37,11 +37,11 @@
     <a class="logo" href="#portada" aria-label="Alce">
       <img class="logo__img" src="../img/logo.png" alt="Alce" onerror="this.replaceWith(document.createTextNode('Alce'))">
     </a>
-    <div class="site-header__right">
-      <nav id="site-nav" class="site-nav" aria-label="Principal">
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list" aria-label="Menu">
-          <span class="nav-toggle__bar" aria-hidden="true"></span>
-        </button>
+    <nav id="site-nav" class="site-nav" aria-label="Principal">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Menu">
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+      </button>
+      <div class="nav-panel" id="nav-panel">
         <ul id="nav-list" class="nav-list">
           <li><a href="#que-es">O que é a Alce</a></li>
           <li><a href="#criterios">Que empresas compramos</a></li>
@@ -49,15 +49,15 @@
           <li><a href="#equipo">Equipa</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
-      </nav>
-      <div class="lang-switch">
-        <a href="../index.html" hreflang="es" lang="es">ES</a>
-        <span aria-hidden="true">/</span>
-        <a href="../en/index.html" hreflang="en" lang="en">EN</a>
-        <span aria-hidden="true">/</span>
-        <a href="index.html" hreflang="pt" lang="pt" aria-current="true">PT</a>
+        <div class="lang-switch">
+          <a href="../index.html" hreflang="es" lang="es">ES</a>
+          <span aria-hidden="true">/</span>
+          <a href="../en/index.html" hreflang="en" lang="en">EN</a>
+          <span aria-hidden="true">/</span>
+          <a href="index.html" hreflang="pt" lang="pt" aria-current="true">PT</a>
+        </div>
       </div>
-    </div>
+    </nav>
   </div>
 </header>
 
@@ -194,33 +194,33 @@
           <tbody>
             <tr>
               <th scope="row">Horizonte</th>
-              <td>Vender em 4 a 6 anos</td>
-              <td>Absorver e integrar</td>
-              <td class="col-alce">Para sempre</td>
+              <td data-label="Um fundo">Vender em 4 a 6 anos</td>
+              <td data-label="Um concorrente">Absorver e integrar</td>
+              <td class="col-alce" data-label="Alce">Para sempre</td>
             </tr>
             <tr>
               <th scope="row">Papel do dono</th>
-              <td>Substituído ou sob pressão</td>
-              <td>Dispensável após a integração</td>
-              <td class="col-alce">À frente o tempo que quiser</td>
+              <td data-label="Um fundo">Substituído ou sob pressão</td>
+              <td data-label="Um concorrente">Dispensável após a integração</td>
+              <td class="col-alce" data-label="Alce">À frente o tempo que quiser</td>
             </tr>
             <tr>
               <th scope="row">A equipa</th>
-              <td>Reestruturação habitual</td>
-              <td>Duplicações e saídas</td>
-              <td class="col-alce">Fica como está</td>
+              <td data-label="Um fundo">Reestruturação habitual</td>
+              <td data-label="Um concorrente">Duplicações e saídas</td>
+              <td class="col-alce" data-label="Alce">Fica como está</td>
             </tr>
             <tr>
               <th scope="row">A marca</th>
-              <td>Mantém-se até à revenda</td>
-              <td>Desaparece</td>
-              <td class="col-alce">Fica</td>
+              <td data-label="Um fundo">Mantém-se até à revenda</td>
+              <td data-label="Um concorrente">Desaparece</td>
+              <td class="col-alce" data-label="Alce">Fica</td>
             </tr>
             <tr>
               <th scope="row">O dia a dia</th>
-              <td>Plano de valor e reporting intensivo</td>
-              <td>Os procedimentos do comprador</td>
-              <td class="col-alce">Os mesmos, com mais meios</td>
+              <td data-label="Um fundo">Plano de valor e reporting intensivo</td>
+              <td data-label="Um concorrente">Os procedimentos do comprador</td>
+              <td class="col-alce" data-label="Alce">Os mesmos, com mais meios</td>
             </tr>
           </tbody>
         </table>

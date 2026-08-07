@@ -37,11 +37,11 @@
     <a class="logo" href="#portada" aria-label="Alce">
       <img class="logo__img" src="../img/logo.png" alt="Alce" onerror="this.replaceWith(document.createTextNode('Alce'))">
     </a>
-    <div class="site-header__right">
-      <nav id="site-nav" class="site-nav" aria-label="Main">
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list" aria-label="Menu">
-          <span class="nav-toggle__bar" aria-hidden="true"></span>
-        </button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Menu">
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+      </button>
+      <div class="nav-panel" id="nav-panel">
         <ul id="nav-list" class="nav-list">
           <li><a href="#que-es">What Alce is</a></li>
           <li><a href="#criterios">The Companies We Buy</a></li>
@@ -49,15 +49,15 @@
           <li><a href="#equipo">Team</a></li>
           <li><a href="#contacto">Contact</a></li>
         </ul>
-      </nav>
-      <div class="lang-switch">
-        <a href="../index.html" hreflang="es" lang="es">ES</a>
-        <span aria-hidden="true">/</span>
-        <a href="index.html" hreflang="en" lang="en" aria-current="true">EN</a>
-        <span aria-hidden="true">/</span>
-        <a href="../pt/index.html" hreflang="pt" lang="pt">PT</a>
+        <div class="lang-switch">
+          <a href="../index.html" hreflang="es" lang="es">ES</a>
+          <span aria-hidden="true">/</span>
+          <a href="index.html" hreflang="en" lang="en" aria-current="true">EN</a>
+          <span aria-hidden="true">/</span>
+          <a href="../pt/index.html" hreflang="pt" lang="pt">PT</a>
+        </div>
       </div>
-    </div>
+    </nav>
   </div>
 </header>
 
@@ -194,33 +194,33 @@
           <tbody>
             <tr>
               <th scope="row">Horizon</th>
-              <td>Sell in 4 to 6 years</td>
-              <td>Absorb and integrate</td>
-              <td class="col-alce">Forever</td>
+              <td data-label="A fund">Sell in 4 to 6 years</td>
+              <td data-label="A competitor">Absorb and integrate</td>
+              <td class="col-alce" data-label="Alce">Forever</td>
             </tr>
             <tr>
               <th scope="row">Owner's role</th>
-              <td>Replaced or under pressure</td>
-              <td>Dispensable after integration</td>
-              <td class="col-alce">At the helm as long as they want</td>
+              <td data-label="A fund">Replaced or under pressure</td>
+              <td data-label="A competitor">Dispensable after integration</td>
+              <td class="col-alce" data-label="Alce">At the helm as long as they want</td>
             </tr>
             <tr>
               <th scope="row">The team</th>
-              <td>Routine restructuring</td>
-              <td>Duplicated roles and departures</td>
-              <td class="col-alce">Stays as it is</td>
+              <td data-label="A fund">Routine restructuring</td>
+              <td data-label="A competitor">Duplicated roles and departures</td>
+              <td class="col-alce" data-label="Alce">Stays as it is</td>
             </tr>
             <tr>
               <th scope="row">The brand</th>
-              <td>Kept until the resale</td>
-              <td>Disappears</td>
-              <td class="col-alce">Stays</td>
+              <td data-label="A fund">Kept until the resale</td>
+              <td data-label="A competitor">Disappears</td>
+              <td class="col-alce" data-label="Alce">Stays</td>
             </tr>
             <tr>
               <th scope="row">The day-to-day</th>
-              <td>Value plan and intensive reporting</td>
-              <td>The buyer's procedures</td>
-              <td class="col-alce">The same, with more resources</td>
+              <td data-label="A fund">Value plan and intensive reporting</td>
+              <td data-label="A competitor">The buyer's procedures</td>
+              <td class="col-alce" data-label="Alce">The same, with more resources</td>
             </tr>
           </tbody>
         </table>

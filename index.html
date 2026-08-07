@@ -37,27 +37,27 @@
     <a class="logo" href="#portada" aria-label="Alce">
       <img class="logo__img" src="img/logo.png" alt="Alce" onerror="this.replaceWith(document.createTextNode('Alce'))">
     </a>
-    <div class="site-header__right">
     <nav id="site-nav" class="site-nav" aria-label="Principal">
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list" aria-label="Menú">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Menú">
         <span class="nav-toggle__bar" aria-hidden="true"></span>
       </button>
-      <ul id="nav-list" class="nav-list">
-        <li><a href="#que-es">Qué es Alce</a></li>
-        <li><a href="#criterios">Qué empresas compramos</a></li>
-        <li><a href="#propietarios">Para propietarios</a></li>
-        <li><a href="#equipo">Equipo</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-      <div class="lang-switch">
-        <a href="index.html" hreflang="es" lang="es" aria-current="true">ES</a>
-        <span aria-hidden="true">/</span>
-        <a href="en/index.html" hreflang="en" lang="en">EN</a>
-        <span aria-hidden="true">/</span>
-        <a href="pt/index.html" hreflang="pt" lang="pt">PT</a>
+      <div class="nav-panel" id="nav-panel">
+        <ul id="nav-list" class="nav-list">
+          <li><a href="#que-es">Qué es Alce</a></li>
+          <li><a href="#criterios">Qué empresas compramos</a></li>
+          <li><a href="#propietarios">Para propietarios</a></li>
+          <li><a href="#equipo">Equipo</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <div class="lang-switch">
+          <a href="index.html" hreflang="es" lang="es" aria-current="true">ES</a>
+          <span aria-hidden="true">/</span>
+          <a href="en/index.html" hreflang="en" lang="en">EN</a>
+          <span aria-hidden="true">/</span>
+          <a href="pt/index.html" hreflang="pt" lang="pt">PT</a>
+        </div>
       </div>
-    </div>
+    </nav>
   </div>
 </header>
 
@@ -194,33 +194,33 @@
           <tbody>
             <tr>
               <th scope="row">Horizonte</th>
-              <td>Vender en 4 o 6 años</td>
-              <td>Absorber e integrar</td>
-              <td class="col-alce">Para siempre</td>
+              <td data-label="Un fondo">Vender en 4 o 6 años</td>
+              <td data-label="Un competidor">Absorber e integrar</td>
+              <td class="col-alce" data-label="Alce">Para siempre</td>
             </tr>
             <tr>
               <th scope="row">Papel del dueño</th>
-              <td>Sustituido o bajo presión</td>
-              <td>Prescindible tras la integración</td>
-              <td class="col-alce">Al frente el tiempo que quiera</td>
+              <td data-label="Un fondo">Sustituido o bajo presión</td>
+              <td data-label="Un competidor">Prescindible tras la integración</td>
+              <td class="col-alce" data-label="Alce">Al frente el tiempo que quiera</td>
             </tr>
             <tr>
               <th scope="row">El equipo</th>
-              <td>Reestructuración habitual</td>
-              <td>Duplicidades y salidas</td>
-              <td class="col-alce">Se queda como está</td>
+              <td data-label="Un fondo">Reestructuración habitual</td>
+              <td data-label="Un competidor">Duplicidades y salidas</td>
+              <td class="col-alce" data-label="Alce">Se queda como está</td>
             </tr>
             <tr>
               <th scope="row">La marca</th>
-              <td>Se mantiene hasta la reventa</td>
-              <td>Desaparece</td>
-              <td class="col-alce">Se queda</td>
+              <td data-label="Un fondo">Se mantiene hasta la reventa</td>
+              <td data-label="Un competidor">Desaparece</td>
+              <td class="col-alce" data-label="Alce">Se queda</td>
             </tr>
             <tr>
               <th scope="row">El día a día</th>
-              <td>Plan de valor y reporting intensivo</td>
-              <td>Los procedimientos del comprador</td>
-              <td class="col-alce">Los mismos, con más medios</td>
+              <td data-label="Un fondo">Plan de valor y reporting intensivo</td>
+              <td data-label="Un competidor">Los procedimientos del comprador</td>
+              <td class="col-alce" data-label="Alce">Los mismos, con más medios</td>
             </tr>
           </tbody>
         </table>
