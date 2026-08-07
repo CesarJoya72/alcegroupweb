@@ -101,7 +101,7 @@ p:last-child{ margin-bottom: 0; }
   font-family: var(--font-text);
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: var(--slate);
   margin: 0 0 18px;
@@ -139,7 +139,9 @@ p:last-child{ margin-bottom: 0; }
   justify-content: space-between;
   gap: 16px;
 }
-.site-header__right{
+/* Panel que agrupa navegación e idiomas: en línea en escritorio,
+   desplegable en móvil (así los idiomas no compiten por sitio en la cabecera). */
+.nav-panel{
   display: flex;
   align-items: center;
   gap: clamp(14px, 2vw, 28px);
@@ -485,7 +487,7 @@ p:last-child{ margin-bottom: 0; }
   margin-bottom: 4px;
 }
 .member__role{
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.14em;
   color: var(--slate);
@@ -603,23 +605,25 @@ p:last-child{ margin-bottom: 0; }
   .criterion{ padding: 24px 24px 26px; }
 }
 
-/* Menú móvil: colapsa la navegación tras el botón (requiere JS).
+/* Menú móvil: navegación e idiomas se colapsan tras el botón (requiere JS).
    Corte a 1020px: por debajo, logo + navegación + idiomas no caben en una línea. */
 @media (max-width: 1020px){
   .js .nav-toggle{ display: inline-flex; align-items: center; justify-content: center; }
-  .js .nav-list{
+  .js .nav-panel{
     position: absolute;
     top: var(--header-h);
     left: 0;
     right: 0;
     flex-direction: column;
+    align-items: stretch;
     gap: 0;
     background: var(--white);
     border-bottom: var(--hair);
-    padding: 8px var(--wrap-pad) 16px;
+    padding: 8px var(--wrap-pad) 14px;
     display: none;
   }
-  .js .site-nav.is-open .nav-list{ display: flex; }
+  .js .site-nav.is-open .nav-panel{ display: flex; }
+  .js .nav-list{ flex-direction: column; gap: 0; width: 100%; }
   .js .nav-list li{ width: 100%; }
   .js .nav-list a{
     display: block;
@@ -629,8 +633,19 @@ p:last-child{ margin-bottom: 0; }
   }
   .js .nav-list li:last-child a{ border-bottom: none; }
   .js .nav-list a[aria-current="true"]{ border-bottom-color: var(--pale); }
+  /* Idiomas: dentro del desplegable, separados por un filete */
+  .js .nav-panel .lang-switch{
+    justify-content: flex-start;
+    gap: 14px;
+    padding-top: 14px;
+    margin-top: 6px;
+    border-top: var(--hair);
+    font-size: 1rem;
+  }
   .site-header{ position: sticky; }
   .site-nav{ position: static; }
+  /* Logo más contenido cuando la cabecera es compacta */
+  .logo__img{ height: 32px; }
 }
 
 /* En móvil el texto ocupa todo el ancho: velo más uniforme y oscuro sobre la foto */
@@ -645,7 +660,114 @@ p:last-child{ margin-bottom: 0; }
   }
 }
 
-/* Móvil pequeño hasta 360px */
+/* ---------- Móvil: la tabla comparativa deja de ser tabla ----------
+   Sin cajas: filetes y tipografía, como el resto de la web. Por bloque, la
+   respuesta de Alce va primero y grande (se reordena con flex, el HTML no cambia)
+   y debajo, en secundario, lo que hacen las alternativas. */
+@media (max-width: 760px){
+  .cmp-scroll{ overflow: visible; margin-top: 10px; }
+  .cmp{ min-width: 0; width: 100%; }
+  .cmp, .cmp thead, .cmp tbody, .cmp th, .cmp td{ display: block; }
+  .cmp thead{ display: none; }
+
+  .cmp tbody tr{
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    border-top: var(--hair);
+    margin: 0;
+    padding: 26px 0 10px;
+  }
+  .cmp tbody tr:first-child{ border-top: 1px solid var(--ink); }
+
+  /* La dimensión pasa a rótulo pequeño, como los eyebrows del resto del sitio */
+  .cmp tbody th[scope="row"]{
+    order: -2;
+    position: static;
+    text-align: left;
+    background: transparent;
+    border: none;
+    padding: 0 0 14px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--slate);
+  }
+
+  /* Las alternativas: barra clara, cuerpo menor */
+  .cmp tbody td{
+    position: static;
+    text-align: left;
+    background: transparent;
+    border: none;
+    border-left: 2px solid var(--pale);
+    padding: 0 0 0 16px;
+    margin-bottom: 15px;
+    color: var(--slate);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  .cmp tbody td::before{
+    content: attr(data-label);
+    display: block;
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--slate);
+    margin-bottom: 4px;
+  }
+
+  /* Alce, protagonista: primero, barra oscura y cuerpo grande */
+  .cmp tbody td.col-alce{
+    order: -1;
+    border-left: 2px solid var(--ink);
+    margin-bottom: 22px;
+    padding: 13px 16px 15px;
+    color: var(--ink);
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  /* En vez del rótulo "ALCE", el logo. La ruta es relativa a styles.css,
+     así que vale igual para la raíz, /en/ y /pt/. */
+  .cmp tbody td.col-alce::before{
+    content: "";
+    display: block;
+    width: 64px;
+    height: 15px;
+    background: url("img/logo.png") left center / contain no-repeat;
+    margin-bottom: 9px;
+  }
+}
+
+/* ---------- Móvil: pie ---------- */
+@media (max-width: 860px){
+  .footer__inner{ flex-direction: column; align-items: flex-start; gap: 22px; }
+  .footer__logo{
+    height: 52px;
+    margin-left: 0;
+    order: -1;            /* la marca abre el pie; el copyright lo cierra */
+  }
+  .footer__tagline{ margin-bottom: 14px; }
+}
+
+/* ---------- Móvil: ritmo vertical más ceñido ----------
+   El aire que funciona en escritorio hace la página muy larga en un teléfono. */
+@media (max-width: 600px){
+  :root{ --section-y: 44px; }
+  .hero{ padding-block: 64px; }
+  .subhead{ margin: 32px 0 14px; }
+  .section__title{ margin-bottom: 18px; }
+  .intro{ margin-bottom: 24px; }
+  .criterion{ padding: 22px 22px 24px; }
+  .owner-block{ padding-block: 22px; }
+  .site-footer{ padding-block: 44px; }
+}
+
+/* Móvil pequeño: los botones se ajustan a su texto, sin ocupar todo el ancho */
 @media (max-width: 400px){
-  .cta-row .btn{ width: 100%; text-align: center; }
+  .cta-row .btn{ max-width: 100%; }
 }
