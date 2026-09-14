@@ -406,7 +406,7 @@ p:last-child{ margin-bottom: 0; }
 }
 .cmp thead th:first-child{ text-align: left; }
 .cmp tbody th[scope="row"]{
-  font-weight: 500;
+  font-weight: 700;
   color: var(--ink);
   background: var(--white);
 }
