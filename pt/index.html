@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="../img/hero.jpg">
-<link rel="stylesheet" href="../styles.css?v=20260914b">
+<link rel="stylesheet" href="../styles.css?v=20260914c">
 <link rel="canonical" href="https://alcegroup.com/pt/">
 <link rel="alternate" hreflang="es" href="https://alcegroup.com/">
 <link rel="alternate" hreflang="en" href="https://alcegroup.com/en/">
@@ -83,30 +83,41 @@
       <p class="eyebrow">O que é a Alce</p>
       <h2 class="section__title">Vender a empresa não devia significar perdê-la.</h2>
       <div class="prose measure">
-        <p>Qualquer dono acaba por fazer a mesma pergunta: quem vai gerir isto quando ele já não estiver à frente.</p>
-        <p>As opções habituais parecem-se mais entre si do que se julga. Um fundo compra para vender dentro de quatro ou cinco anos, e tudo o que faz até lá é feito a pensar nessa venda. Um concorrente compra para absorver: a marca, a equipa e a forma de fazer as coisas duram o que durar a integração.</p>
+        <p>As opções habituais parecem-se mais entre si do que se julga. Um fundo compra para vender dentro de quatro ou cinco anos. Um concorrente compra para absorver: a marca, a equipa e a forma de fazer as coisas duram o que durar a integração.</p>
         <h3 class="subhead">A Alce é outro tipo de comprador</h3>
-        <p>A Alce não é um fundo. É um grupo empresarial que compra empresas e fica com elas, sem data de venda e sem planos de integração. Somos apoiados por famílias empresárias e investidores de longo prazo. A caixa que cada empresa gera é reinvestida tanto no seu próprio crescimento como na compra de outras, ano após ano.</p>
+        <p>A Alce não é um fundo. É um grupo empresarial que compra empresas e fica com elas, sem data de venda e sem planos de integração. Somos apoiados por famílias empresárias e investidores de longo prazo.</p>
         <p>É um modelo que funciona há décadas no norte da Europa e nos Estados Unidos. Em Portugal e Espanha ainda são muito poucos os que o fazem. Queremos ser esse comprador de referência.</p>
       </div>
 
       <h3 class="subhead">Como trabalhamos</h3>
       <div class="commitments">
         <div class="commitment">
-          <p><strong>Não nos metemos no dia a dia.</strong> As decisões são tomadas na empresa, que é onde está a informação. O nosso papel é outro: trazer o que uma empresa sozinha não costuma ter (financiamento para crescer, ajuda em contratações-chave e o que já resultou nas restantes empresas do grupo) e estar presentes quando o dono quiser uma segunda opinião.</p>
+          <span class="commitment__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c0-3.6 3-6 7-6s7 2.4 7 6"/></svg></span>
+          <h4 class="commitment__title">Não nos metemos no dia a dia.</h4>
+          <p>As decisões são tomadas na empresa. Nós trazemos capital para crescer, ajuda nas contratações-chave e uma segunda opinião quando o dono a quiser.</p>
         </div>
         <div class="commitment">
-          <p><strong>Um preço claro, depois de nos conhecermos.</strong> Primeiro percebemos a empresa e conhecemos o dono; depois dizemos por escrito quanto podemos pagar. Compramos poucas empresas, bem escolhidas e sem as carregar de dívida.</p>
+          <span class="commitment__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.2l2.4 2.4 4.6-5"/></svg></span>
+          <h4 class="commitment__title">Poucas empresas por ano, bem escolhidas.</h4>
+          <p>Compramos poucas empresas por ano, bem escolhidas e sem as carregar de dívida. Preferimos conhecer bem a empresa e o dono antes de decidir.</p>
         </div>
         <div class="commitment">
-          <p><strong>Não mudamos o preço à última hora.</strong> O preço que acordamos é o que pagamos. As verificações anteriores ao fecho servem para confirmar, não para baixar o preço.</p>
-        </div>
-        <div class="commitment">
-          <p><strong>Não vendemos.</strong> O que as empresas ganham é reinvestido em fazê-las crescer e em comprar outras. É assim que se constrói um grupo que dura décadas.</p>
+          <span class="commitment__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c-1.8-2.6-3.4-4-5.6-4a4 4 0 0 0 0 8c2.2 0 3.8-1.4 5.6-4s3.4-4 5.6-4a4 4 0 0 1 0 8c-2.2 0-3.8-1.4-5.6-4z"/></svg></span>
+          <h4 class="commitment__title">Não vendemos.</h4>
+          <p>O que as empresas ganham é reinvestido em fazê-las crescer e em comprar outras. É assim que se constrói um grupo que dura décadas.</p>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Banda de imagen 1: pausa visual, sin texto. Ver img/LEEME.txt. -->
+  <!-- imagen pendiente de selección definitiva -->
+  <div class="band" aria-hidden="true">
+    <picture>
+      <source type="image/webp" srcset="../img/banda-1.webp">
+      <img class="band__img" src="../img/banda-1.jpg" alt="" loading="lazy" onerror="this.closest('.band').remove()">
+    </picture>
+  </div>
 
   <!-- 3. QUE EMPRESAS COMPRAMOS -->
   <section id="criterios" class="section section--cream">
@@ -154,8 +165,6 @@
     <div class="wrap reveal">
       <p class="eyebrow">Para proprietários</p>
       <h2 class="section__title">O que muda e o que não muda</h2>
-      <p class="intro measure">Vender é a maior decisão que um dono toma sobre a sua empresa, e nunca é apenas uma questão de preço. Estas são as perguntas que todos os donos nos fazem, respondidas de antemão.</p>
-
       <div class="owner-grid">
         <div class="owner-block">
           <h3 class="owner-block__title">O dono continua à frente</h3>
@@ -170,16 +179,16 @@
           <p>Não compramos para cortar nem para desmontar o que funciona; compramos precisamente porque funciona. A empresa continua a ser dirigida a partir de dentro, e a sua equipa continua a fazer o seu trabalho com as pessoas de sempre. Não estamos em cima da empresa; estamos ao lado dela.</p>
         </div>
         <div class="owner-block">
-          <h3 class="owner-block__title">O que muda, muda para melhor</h3>
-          <p>Um sócio com quem crescer, com capital para o fazer sem que o dono volte a pôr dinheiro nem garantias pessoais. Um conselho que reúne pouco, decide depressa e traz o que já resultou noutras empresas do grupo. Informação clara e em dia, para decidir melhor, não para controlar. E ajuda no que mais custa: trazer as pessoas-chave, preparar a sucessão e profissionalizar sem perder o carácter da casa. Sempre em conjunto com o dono, nunca por cima dele. Tudo o resto fica onde estava.</p>
-        </div>
-        <div class="owner-block">
           <h3 class="owner-block__title">O nome fica</h3>
           <p>Nem integração, nem mudança de marca, nem passar a ser uma divisão de outra empresa. A empresa continua a ser a empresa.</p>
         </div>
         <div class="owner-block">
           <h3 class="owner-block__title">Diversifica o seu património, a tempo</h3>
-          <p>Quase tudo o que construiu está dentro da empresa. Com a venda, garante desde já uma parte importante e deixa de ter tudo no mesmo sítio, sem abdicar do que vier a seguir. E fá-lo quando nada o obriga: as vendas que correm mal chegam quase sempre tarde, por uma sucessão por resolver, um problema de saúde ou um mau ano.</p>
+          <p>Quase tudo o que construiu está dentro da empresa. Com a venda, garante desde já uma parte importante, sem abdicar do que vier a seguir. E fá-lo quando nada o obriga: as vendas que correm mal chegam quase sempre tarde, por uma sucessão por resolver, um problema de saúde ou um mau ano.</p>
+        </div>
+        <div class="owner-block">
+          <h3 class="owner-block__title">O que muda, muda para melhor</h3>
+          <p>Um sócio com capital para crescer, sem que o dono volte a pôr dinheiro nem garantias pessoais. Um conselho que reúne pouco e decide depressa. Informação clara e em dia. E ajuda no que mais custa: trazer as pessoas-chave e preparar a sucessão. Sempre ao lado do dono, nunca por cima dele.</p>
         </div>
       </div>
 
@@ -239,26 +248,7 @@
     </div>
   </section>
 
-  <!-- 5. COMO ISTO COMEÇA: bloco independente e fácil de eliminar -->
-  <section id="empieza" class="section section--cream" aria-labelledby="empieza-title">
-    <div class="wrap reveal">
-      <p class="eyebrow" id="empieza-eyebrow">Como isto começa</p>
-      <h2 class="section__title" id="empieza-title">Tudo começa com uma conversa.</h2>
-      <div class="steps">
-        <div class="step">
-          <p><strong>Uma conversa, e nada mais.</strong> Conte-nos o que quiser. Sem documentos, sem assinar nada, com total confidencialidade.</p>
-        </div>
-        <div class="step">
-          <p><strong>Se fizer sentido, apresentamos-lhe um preço em breve.</strong></p>
-        </div>
-        <div class="step">
-          <p><strong>E se não fizer sentido, dizemos-lho com a mesma rapidez.</strong></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Banda de paisaje: reutiliza img/hero.jpg de momento (imagen limpia, sin velo). -->
+  <!-- Banda de paisaje: reutiliza img/hero.jpg (imagen limpia, sin velo). -->
   <div class="landscape" aria-hidden="true">
     <img class="landscape__img" src="../img/hero.jpg" alt="" loading="lazy">
   </div>
@@ -298,7 +288,40 @@
     <div class="wrap reveal">
       <p class="eyebrow">Contacto</p>
       <h2 class="section__title">Vamos conversar</h2>
-      <p class="contact__text measure">Se anda a pensar no futuro da sua empresa, mesmo que seja cedo e não tenha nada decidido, <a href="mailto:cesar@alcegroup.com,amadeo@alcegroup.com">escreva-nos</a>. A conversa é confidencial e não o compromete a nada.</p>
+      <p class="contact__text">Se anda a pensar no futuro da sua empresa, mesmo que seja cedo e não tenha nada decidido, deixe-nos o seu número e nós ligamos-lhe. A conversa é confidencial e não o compromete a nada.</p>
+
+      <!-- FORM_ENDPOINT: aquí se configura el envío. Sustituir el valor de "action" por la URL del
+           servicio de formularios (p. ej. https://formspree.io/f/XXXXXXXX), en los tres idiomas.
+           Mientras sea un mailto:, el formulario abre el correo del visitante con los campos. -->
+      <form class="contact-form" id="contact-form" action="mailto:cesar@alcegroup.com,amadeo@alcegroup.com?subject=Web%20%C2%B7%20nueva%20solicitud%20de%20llamada" method="post" enctype="text/plain">
+        <input type="hidden" name="_subject" value="Web · nueva solicitud de llamada">
+        <p class="hp" aria-hidden="true"><label>Não preencher <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></p>
+        <div class="form-field">
+          <label for="f-nombre">Nome</label>
+          <input id="f-nombre" name="nombre" type="text" required autocomplete="name">
+        </div>
+        <div class="form-field">
+          <label for="f-telefono">Telefone</label>
+          <input id="f-telefono" name="telefono" type="tel" required autocomplete="tel">
+        </div>
+        <div class="form-field">
+          <label for="f-email">E-mail (opcional)</label>
+          <input id="f-email" name="email" type="email" autocomplete="email">
+        </div>
+        <div class="form-field">
+          <label for="f-mensaje">Mensagem (opcional)</label>
+          <textarea id="f-mensaje" name="mensaje" rows="3" placeholder="Se quiser, conte-nos um pouco sobre a sua empresa ou quando lhe dá jeito que liguemos."></textarea>
+        </div>
+        <div class="form-check">
+          <input id="f-privacidad" name="privacidad" type="checkbox" value="sim" required>
+          <label for="f-privacidad">Li a <a href="privacidade.html">política de privacidade</a> e aceito ser contactado pela Alce.</label>
+        </div>
+        <button class="btn btn--ghost" type="submit">Enviar</button>
+        <p class="form-status form-status--error" hidden>Não foi possível enviar. Escreva para <a href="mailto:cesar@alcegroup.com">cesar@alcegroup.com</a> e nós ligamos-lhe.</p>
+      </form>
+      <p class="form-status form-status--ok" role="status" hidden>Obrigado. Nós ligamos-lhe, com discrição.</p>
+
+      <p class="contact__address">Alce · Paseo de la Castellana 182, 28046 Madrid, Espanha</p>
     </div>
   </section>
 
@@ -310,12 +333,12 @@
     <div class="footer__text">
       <p class="footer__tagline">Uma casa para o que construiu</p>
       <p class="footer__secondary">É assessor ou intermediário? <a href="mailto:cesar@alcegroup.com,amadeo@alcegroup.com">Escreva-nos</a>.</p>
-      <p class="footer__copy">© 2026 Alce. Todos os direitos reservados.</p>
+      <p class="footer__copy">© 2026 Alce. Todos os direitos reservados. · <a href="privacidade.html">Política de privacidade</a></p>
     </div>
     <img class="footer__logo" src="../img/logo-blanco.png" alt="" aria-hidden="true" onerror="this.remove()">
   </div>
 </footer>
 
-<script src="../main.js?v=20260914b" defer></script>
+<script src="../main.js?v=20260914c" defer></script>
 </body>
 </html>

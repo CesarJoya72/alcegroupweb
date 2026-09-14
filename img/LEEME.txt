@@ -1,0 +1,19 @@
+FICHEROS QUE USA LA WEB (nombres canónicos, no los cambies):
+
+  logo.png            -> logo recortado (generado a partir de "Logo ALCE 2.0.png")
+  hero.jpg            -> fondo de la portada (copia de "Fondo Alce.jpg")
+  cesar.jpg           -> retrato de César
+  amadeo.jpg          -> retrato de Amadeo
+  banda-1.webp + banda-1.jpg -> PENDIENTE: paisaje de la banda entre "Cómo trabajamos" y "Qué empresas compramos"
+
+PENDIENTE (14/09/2026):
+  Falta la banda de paisaje 1. Necesita los DOS ficheros (WebP y JPG, mismo nombre,
+  <= 300 KB cada uno). Motivo: paisaje de montaña, tonos apagados, luz suave; distinto
+  del hero. Nada de mar, gente, naves ni oficinas. En cuanto existan los ficheros, la
+  banda aparece sola en los tres idiomas. Mientras no existan, no se muestra.
+  (La banda 2 se eliminó junto con la sección "Cómo empieza esto".)
+
+Los originales que subiste ("Logo ALCE 2.0.png", "Fondo Alce.jpg",
+"Foto_César de la Joya.jpg", "Foto_Amadeo López-Bachiller.jpg") se conservan;
+la web usa las copias con nombre limpio de arriba. Si actualizas una imagen,
+sustituye el fichero de nombre canónico correspondiente.

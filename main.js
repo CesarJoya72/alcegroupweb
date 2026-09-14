@@ -147,4 +147,56 @@
     if (document.fonts && document.fonts.ready) { document.fonts.ready.then(equalizeRows); }
     equalizeRows();
   }
+
+  /* ----------------------------------------------------------
+     5) FORMULARIO DE CONTACTO
+     El endpoint se configura en el atributo "action" del <form>
+     (ver comentario FORM_ENDPOINT en cada index.html). Mientras el
+     action sea un mailto:, no se intercepta: el navegador abre el
+     correo del visitante con los campos (funciona también sin JS).
+     Con una URL de servicio de formularios, se envía por fetch y
+     se sustituye el formulario por la confirmación, sin salir de
+     la página. Antispam: honeypot + rechazo de envíos en < 3 s.
+     ---------------------------------------------------------- */
+  var form = document.getElementById("contact-form");
+
+  if (form && window.fetch && !/^mailto:/i.test(form.getAttribute("action") || "")) {
+    var loadedAt = Date.now();
+    var okMsg = document.querySelector(".form-status--ok");
+    var errMsg = form.querySelector(".form-status--error");
+    var submitBtn = form.querySelector('[type="submit"]');
+
+    var showOk = function () {
+      form.hidden = true;
+      if (okMsg) {
+        okMsg.hidden = false;
+        okMsg.setAttribute("tabindex", "-1");
+        okMsg.focus();
+      }
+    };
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (errMsg) { errMsg.hidden = true; }
+
+      // Bots: campo trampa relleno o envío demasiado rápido. No se envía nada.
+      var trap = form.querySelector('[name="_gotcha"]');
+      if ((trap && trap.value) || Date.now() - loadedAt < 3000) { showOk(); return; }
+
+      if (submitBtn) { submitBtn.disabled = true; }
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { "Accept": "application/json" }
+      })
+        .then(function (res) {
+          if (!res.ok) { throw new Error(String(res.status)); }
+          showOk();
+        })
+        .catch(function () {
+          if (errMsg) { errMsg.hidden = false; }
+          if (submitBtn) { submitBtn.disabled = false; }
+        });
+    });
+  }
 })();
