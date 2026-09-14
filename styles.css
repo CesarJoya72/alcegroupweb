@@ -385,9 +385,12 @@ p:last-child{ margin-bottom: 0; }
 .cmp td{
   text-align: center;                 /* todo centrado... */
   padding: 15px 18px;
-  vertical-align: top;
+  vertical-align: middle;             /* una sola línea: centrada en altura */
   border-bottom: var(--hair);
 }
+/* Todas las filas con la misma altura (dos líneas de texto). Si alguna fila
+   necesita más, main.js iguala las demás a la más alta. */
+.cmp tbody tr{ height: calc(3.2em + 31px); }
 .cmp th[scope="row"]{ text-align: left; }   /* ...salvo la columna de la izquierda */
 .cmp thead th{
   font-family: var(--font-text);
@@ -671,6 +674,7 @@ p:last-child{ margin-bottom: 0; }
   .cmp thead{ display: none; }
 
   .cmp tbody tr{
+    height: auto !important;          /* anula la altura fija de escritorio */
     display: flex;
     flex-direction: column;
     background: transparent;

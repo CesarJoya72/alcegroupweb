@@ -119,4 +119,32 @@
 
     sections.forEach(function (section) { spy.observe(section); });
   }
+
+  /* ----------------------------------------------------------
+     4) TABLA COMPARATIVA: FILAS DE IGUAL ALTURA
+     En escritorio, iguala todas las filas a la más alta.
+     En móvil la tabla pasa a tarjetas y no se toca.
+     ---------------------------------------------------------- */
+  var cmpRows = Array.prototype.slice.call(document.querySelectorAll(".cmp tbody tr"));
+
+  if (cmpRows.length) {
+    var desktop = window.matchMedia("(min-width: 761px)");
+
+    function equalizeRows() {
+      cmpRows.forEach(function (row) { row.style.height = ""; });
+      if (!desktop.matches) return;
+      var max = 0;
+      cmpRows.forEach(function (row) { max = Math.max(max, row.getBoundingClientRect().height); });
+      cmpRows.forEach(function (row) { row.style.height = max + "px"; });
+    }
+
+    var resizeTimer;
+    window.addEventListener("resize", function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(equalizeRows, 100);
+    });
+    window.addEventListener("load", equalizeRows);
+    if (document.fonts && document.fonts.ready) { document.fonts.ready.then(equalizeRows); }
+    equalizeRows();
+  }
 })();
