@@ -17,3 +17,12 @@ Los originales que subiste ("Logo ALCE 2.0.png", "Fondo Alce.jpg",
 "Foto_César de la Joya.jpg", "Foto_Amadeo López-Bachiller.jpg") se conservan;
 la web usa las copias con nombre limpio de arriba. Si actualizas una imagen,
 sustituye el fichero de nombre canónico correspondiente.
+
+RETRATOS (24/09/2026):
+  cesar-2.jpg   -> retrato de César (600x800, 3:4). Sale del original "Foto_César de la Joya.jpg",
+                   con los niveles subidos un 2 % para que el fondo sea blanco puro (#FFFFFF).
+  amadeo-2.jpg  -> retrato nuevo de Amadeo, americana azul (515x687, 3:4, tamaño nativo sin ampliar).
+                   Saturación reducida al 80 % para igualar el tono de piel con el retrato de César.
+                   Si aparece el original a más resolución, conviene reexportarlo a 600x800.
+  Sustituyen a cesar.png y amadeo.png (PNG con fondo transparente, ya no los usa ninguna página).
+  Nombre versionado para evitar la caché: la próxima sustitución, cesar-3.jpg / amadeo-3.jpg.

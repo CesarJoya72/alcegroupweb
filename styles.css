@@ -511,6 +511,18 @@ p:last-child{ margin-bottom: 0; }
   font-size: 1.5rem;
   margin-bottom: 4px;
 }
+/* Icono de LinkedIn junto al nombre */
+.member__li{
+  display: inline-block;
+  margin-left: 6px;
+  color: var(--slate);
+  line-height: 0;
+  vertical-align: 0.05em;
+  transition: color .15s ease;
+}
+.member__li:hover,
+.member__li:focus-visible{ color: var(--ink); }
+.member__li svg{ fill: currentColor; }
 .member__role{
   font-size: 0.8rem;
   text-transform: uppercase;
@@ -637,6 +649,15 @@ p:last-child{ margin-bottom: 0; }
   padding-bottom: 1px;
 }
 .footer__secondary a:hover{ border-bottom-color: var(--cream); }
+.footer__social{ margin: 0 0 14px; line-height: 0; }
+.footer__social a{
+  display: inline-block;
+  color: var(--warm);
+  transition: color .15s ease;
+}
+.footer__social a:hover,
+.footer__social a:focus-visible{ color: var(--cream); }
+.footer__social svg{ width: 20px; height: 20px; fill: currentColor; }
 .footer__copy{
   color: var(--warm);
   font-size: 0.8rem;

@@ -3,6 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://alcegroup.com/</loc>
+    <lastmod>2026-09-24</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://alcegroup.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alcegroup.com/en/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://alcegroup.com/pt/"/>
@@ -10,6 +11,7 @@
   </url>
   <url>
     <loc>https://alcegroup.com/en/</loc>
+    <lastmod>2026-09-24</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://alcegroup.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alcegroup.com/en/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://alcegroup.com/pt/"/>
@@ -17,6 +19,7 @@
   </url>
   <url>
     <loc>https://alcegroup.com/pt/</loc>
+    <lastmod>2026-09-24</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://alcegroup.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://alcegroup.com/en/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://alcegroup.com/pt/"/>
